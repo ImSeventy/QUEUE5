@@ -33,14 +33,14 @@ client.on('voiceStateUpdate', (oldMember, newMember) => {
         READ_MESSAGES: true,
         SEND_MESSAGES: true
       }).catch(console.error);
-           client.channels.get("752216422234456084").send(`${newMember}` + " do `=j` to join the queue!");
+           client.channels.get("752216945863950516").send(`${newMember}` + " do `=j` to join the queue!");
       
     } else if (oldID === vcID && newID !== vcID) {   // Left the voice channel.
       textChannel.overwritePermissions(newMember, {
         READ_MESSAGES: null,
         SEND_MESSAGES: null
       }).catch(console.error);
-          client.channels.get("752216422234456084").send(`=fr ${newMember}`);
+          client.channels.get("752216945863950516").send(`=fr ${newMember}`);
     }
   }
 });
